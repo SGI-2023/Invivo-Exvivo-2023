@@ -38,11 +38,11 @@ python closing.py <path-to-configs-file>
 
 ## Getting Started
 
-:warning: Warning: To follow this tutorial you'll need access to our data. If you don't have, contact one of the project members.
+:warning: Warning: To follow this tutorial, you'll need access to our data. If you don't have one, contact one of the project members.
 
 ### 1. Setup
 
-The fist step is to setup the configs of your transformation. You can define them using a json file. We provided an [example](configs/default.json) as default.
+The first step is to set up the configs of your transformation. You can define them using a JSON file. We provided an [example](configs/default.json) as default.
 
 **Config file structure:**
 
@@ -61,32 +61,35 @@ The fist step is to setup the configs of your transformation. You can define the
 * **verbose:** boolean to print measure of time
 * **create_surfaces:** boolean to generate surfaces from closed volume
 
-After defining your config parameters you're ready to run the code.
+After defining your config parameters, you're ready to run the code.
 
 ### 2. Filling in the Mesh into a 3D Volume
 
-The first part of our code uses FreeSurfer to fill in the original surface into a 3D Volume.
+The first part of our code uses FreeSurfer to fill the original surface into a 3D Volume.
 
 ![Filling Surface](assets/filled.png)
 
-### 3. Closing the brain deep sulci
+### 3. Closing the brain's deep sulci
 
-Then, we use the morphological operations (closing) of scikit-image to close the brain deep sulci.
+Then, we use the morphological operations (closing) of scikit-image to close the brain's deep sulci.
 
 ![Filling Surface](assets/closed.png)
 
 ### 4. Meshing/Remeshing the 3D Volume using Marching Cubes
 
-Finally, we our code uses FreeSurfer to get the surface of our volume, and then converts it to our visualization using FreeView.
+Finally, our code uses FreeSurfer to get the surface of our volume and then converts it to our visualization using FreeView.
 
 You can access the files in the selected output directory
+<p align="center">
+ 
+ ![invivo](assets/invivo.png)
+ *Original invivo surface*
+ 
+ 
+ ![exvivo](assets/exvivo.png)
+ *Transformed exvivo surface*
+ 
+ ![exvivo_ex](assets/exvivo_example.png)
+ *Example of Ground-Truth exvivo surface*
 
-![invivo](assets/invivo.png)
-*<center>Original invivo surface</center>*
-
-
-![exvivo](assets/exvivo.png)
-*<center>Transformed exvivo surface</center>*
-
-![exvivo_ex](assets/exvivo_example.png)
-*<center>Example of Ground-Truth exvivo surface</center>*
+</p>
