@@ -1,0 +1,18 @@
+{
+"input_mesh":{
+    "path": "data/invivo/mesh_1.pial",
+    "resample_nverts": 40962,
+    "resolution": 0.5
+},
+
+"closing": {
+    "pad": 10,
+    "radius": 5,
+    "fill_holes": false,
+    "visualization": true
+},
+
+"output_dir": "data/",
+"verbose": true,
+"create_surfaces": true
+}
